@@ -1,5 +1,19 @@
+<style lang="less">
+  .subBtn{
+    width:50px;
+    height: 30px;
+    text-align:center;
+    line-height: 30px;
+    border:1px solid black;
+    cursor: pointer;
+  }
+</style>
 <template>
   <div class="hello">
+    <input type="text" v-model='limitNum'>
+    <div class='subBtn' @click='submitNum'>
+      <p>提交</p>
+    </div>
     <ul>
       <li v-for='(item,index) in themeList'>{{item.id}}--{{item.themeName}}</li>
     </ul>
@@ -13,22 +27,28 @@ export default {
     return {
       msg: 'I’m,back',
       name:'text',
-      themeList:''
+      themeList:'',
+      limitNum:1
     }
   },
   methods:{
     getTestData(){
-     let a= this.$axios.get('/ping/pingPay').then((res)=>{
+     let a= this.$axios.get('/ping/pingPay',{
+      params:{
+        id:this.limitNum
+      }
+     }).then((res)=>{
         let data=res.data;
         if (data.code==200) {
           this.themeList=data.data;
-            console.log(data);
+
         }else{
           alert(data.message);
         }
-
       })
-     console.dir(this.$axios);
+    },
+    submitNum(){
+       this.getTestData();
     }
   },
   mounted(){
