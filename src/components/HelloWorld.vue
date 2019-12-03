@@ -18,7 +18,7 @@ export default {
   },
   methods:{
     getTestData(){
-      this.$axios.get('/ping/pingPay').then((res)=>{
+     let a= this.$axios.get('/ping/pingPay').then((res)=>{
         let data=res.data;
         if (data.code==200) {
           this.themeList=data.data;
@@ -28,6 +28,7 @@ export default {
         }
 
       })
+     console.dir(this.$axios);
     }
   },
   mounted(){
