@@ -10,6 +10,13 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+    	path:'/routerPage',
+    	name:'routerPage',
+    	component: resolve => {
+          require(['@/components/routerPage.vue'], resolve);
+        }
     }
   ]
 })

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
 <!--     <img src="./assets/logo.png"> -->
+<keep-alive include='routerPage'>
     <router-view/>
+    </keep-alive>
   </div>
 </template>
 
@@ -106,7 +108,7 @@ h4,
 h5,
 h6,
 small {
-  font-size: 100%;
+
 }
 sup,
 sub {
