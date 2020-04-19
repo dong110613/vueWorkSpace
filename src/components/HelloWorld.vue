@@ -7,6 +7,62 @@
   border: 1px solid black;
   cursor: pointer;
 }
+.listDiv{
+    border:1px solid red;
+    margin:0 auto;
+    width:860px;
+    display:flex;
+     flex-wrap: wrap;
+     padding:10px;
+    div{
+         height:100px;
+        width:150px;
+        border:1px solid blue;
+        margin:10px;
+    }
+}
+#tianchong{
+    background:black;
+}
+.tianchong{
+    background:red;
+    margin:50px auto;
+    width:200px;
+    height:600px;
+    display:flex;
+    flex-direction:column;
+    .t1{
+        height:248px;
+        width:100%;
+        border:1px solid blue;
+    }
+    .t2{
+        width:100%;
+        background:green;
+        // height:100%;
+        flex:1;
+
+
+    }
+}
+.arrow{
+     width:0;
+
+height:0;
+
+border-top:40px solid transparent;
+
+border-left:40px solid transparent;
+
+border-right:40px solid transparent;
+
+border-bottom:40px solid red;
+}
+// .listDiv:nth-child(1){
+//         height:50px;
+//         width:50px;
+//         border:1px solid blue;
+//     }
 </style>
 <template>
   <div class="hello">
@@ -40,6 +96,20 @@
     <div class="testImg">
       <img src alt />
     </div>
+
+    <div class='listDiv'>
+        <div></div>
+        <div></div>
+        <div></div>
+         <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class='tianchong' id='tianchong'>
+        <div class='t1'></div>
+        <div class='t2'></div>
+    </div>
+    <div class='arrow'></div>
   </div>
 </template>
 
