@@ -16,7 +16,7 @@
     "less-loader": "^5.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.0.1",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
